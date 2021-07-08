@@ -1,0 +1,36 @@
+{% extends 'tienda/base.html' %}
+<!-- Cargar Static -->
+{% load static%}
+<!-- Especificar parte del contenido -->
+{% block content%}
+
+<!-- Registrar -->
+<div class="login-container">
+    <div class="card my-5">
+        <div class="card-body px-5">
+            <h2 class="card-title-reg text-center mt-3 mb-3">Registrar Usuario</h2>
+            <div class="card-text"></div>
+            <form class="login-form" method="POST" id="regform">
+            {% csrf_token %}
+            {% for field in form %}
+               <p class="reg-text">
+               
+               {{ field.label_tag }}
+               {{ field }}
+               {% if campo.help_text %}
+               <small style="color: grey">{{ campo.help_text }}</small>
+               {% endif %}
+               {% for error in campo.errors %}
+               <p style="color: red">{{ error }}</p>
+            {% endfor %} 
+                </p> 
+            {% endfor %}
+                <div class="btn-center mt-1 mb-3">
+                    <button type="submit" class="btn btn-primary btn-login btn-block">Registrar</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+{% endblock content%}

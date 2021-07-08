@@ -1,0 +1,58 @@
+{% extends 'tienda/base.html' %}
+
+<!-- Cargar Static -->
+{% load static%}
+
+{% block content %}
+<main class="my-5">
+    <div class="container " id="card-search">
+        <section class="">
+            <h2 class="text-center mb-4">
+               <strong>Productos</strong>
+            </h2>
+            <div class="row">
+                {% for item in tresultimos %}
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card card-alto">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src="{{ MEDIA_URL }}{{item.imagen.url}}" class="img-fluid img-formato" style="width: 100%;height: 300px;">
+                        
+                        </div>
+                        <div class="card-body card-custom">
+                            <h5 class="card-t text-center mb-3"> {{ item.titulo }}</h5>
+                            <p class="card-text text-color mb-2">
+                                {{ item.contenido }}
+                            </p>
+                            <p class="card-text text-color">
+                                Precio: ${{ item.precio }}
+                            </p>
+                        </div>
+                            <div class="text-center mb-2">
+                                <a href="{%url 'Tienda:Infoproducto'%}" class="btn btn-primary">Leer Más</a>
+                            </div>    
+                      
+                       
+                    </div>
+                </div>
+                {% endfor %}
+            </div> 
+        </section>  
+        <section class="margin-custom">
+            <div class="row">
+                <div class="card ">
+                    <div class="card-body card-custom">
+                        {% for item in sieteultimos %}
+                                <a class="link" href="#"><p class="text-color reg-text"><strong>Titulo: </strong> {{ item.titulo }}, <strong>Descripción: </strong> {{ item.contenido }} , <strong>Precio: $</strong> {{ item.precio }} </p></a>
+                                <hr>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+  
+        </section> 
+       
+    </div>
+                
+</main>
+
+{% endblock content %}

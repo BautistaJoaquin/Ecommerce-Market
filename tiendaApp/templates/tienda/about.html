@@ -1,0 +1,41 @@
+{% extends 'tienda/base.html' %}
+
+<!-- Cargar Static -->
+{% load static%}
+
+{% block content %}
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col">
+                <div class="aboutus">
+                    <h1 class="aboutus-title">Sobre Nosotros</h1>
+                    <div class="text-center">
+                    <img class="mt-1 mb-4" src="{% static 'tienda/img/img-about.jpg' %}" alt="" style="width: 50%;">
+                    </div>
+                    <p class="aboutus-text text-justify">La compañía de alimentos y bebidas más grande del mundo. Mejoramos la calidad de vida y contribuimos a un futuro más saludable ofreciendo productos y servicios para todas las etapas de la vida, cada momento del día, ayudando a la gente a cuidarse a sí mismos y a sus familias..</p>
+                    
+                    <h3 class="aboutus-title mt-5">Nuestro Propósito</h3>
+                    <p class="aboutus-text text-justify">Desarrollamos todo el poder de la alimentación para mejorar la calidad de vida, hoy y para las futuras generaciones.
+                        Ese es nuestro propósito.</p>
+
+                    <p class="aboutus-text text-justify">Somos Jaguarete S.A, la compañía distribuidora de productos. Creemos en el poder de la alimentación para mejorar la calidad de
+                        vida. Una buena alimentación nutre y deleita los sentidos. Contribuye a que las personas disfruten de una vida plena.
+                        Nuestros prodcutos también respetan nuestro planeta y protegen los recursos para las generaciones futuras.</p>
+
+                    <p class="aboutus-text text-justify">En Jaguarete S.A no dejamos de investigar e intentamos ampliar los límites de lo posible en el campo de los alimentos, las
+                        bebidas y las soluciones de salud y nutrición para mejorar la calidad de vida y contribuir a un futuro más
+                        saludable. Centramos nuestra energía y recursos desarrollando el poder de la alimentación en aquellas áreas en las
+                        que podemos marcar una gran diferencia en la vida de las personas y sus mascotas, en las que protegemos y mejoramos
+                        el medio ambiente y en las que creamos un valor significativo para nuestros accionistas y otros grupos de interés.
+                    </p>              
+                    
+                    <a class="aboutus-more mt-4" href="#">read more</a>
+                </div>
+            </div>
+            
+               
+           
+        </div>
+    </div>
+{% endblock content %}
